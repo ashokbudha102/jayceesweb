@@ -1,0 +1,73 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<h3>Have some Queries, Contact us at Devchuli Jaycees</h3>
+<div class="row">
+    <div class="col-12">
+        <br>
+        <h2 class="contact-title"><b>Get in Touch</b></h2>
+    </div>
+    <div class="col-lg-8">
+        <form class="form-contact contact_form" method="post" id="contactForm">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        {{form.body}}
+                        <!--textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Name"></textarea>-->
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        {{form.name}}
+                        <!--<input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">-->
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        {{form.email}}
+                        <!--<input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">-->
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        {{form.subject}}
+                        <!--<input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">-->
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-3 offset-lg-1">
+        <div class="media contact-info">
+            <span class="contact-info__icon"><i class="material-icons">home</i></span>
+            <div class="media-body">
+                <h3>Devchuli Jaycees</h3>
+                <p>Devchuli, NawalParasi</p>
+            </div>
+        </div>
+        <div class="media contact-info"><i class="material-icons">dialpad</i>
+            <div class="media-body">
+                <h3> +9779844568555</h3>
+                <p>President(2021): Nilakantha Pokharel</p>
+            </div>
+        </div>
+        <div class="media contact-info">
+            <span class="contact-info__icon"> <i class="material-icons">email</i>
+            </span>
+            <div class="media-body">
+                <h3>nkp_2044@gmail.com</h3>
+                <p>Send us your query anytime!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
