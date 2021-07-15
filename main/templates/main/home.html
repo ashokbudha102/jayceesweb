@@ -294,6 +294,9 @@
                 <div class="col-sm-12">
                     <a class="read_more" href="javascript:void(0)">Read More</a>
                 </div>
+                {% for year in years %}
+                <a href='{% url "members" year.id %}'> {{year.year}}</a>]
+                {% endfor %}
             </div>
         </div>
     </div>

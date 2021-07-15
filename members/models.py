@@ -2,18 +2,8 @@ from django.db import models
 
 # Create your models here.
 
-
-class customDateField(models.DateField):
-	def value_to_string(self, obj):
-		val = self.value_from_object(obj)
-		if val:
-			val.replace(day=0, month=0)
-			return val.isoformat()
-		return ''
-
-
 class yearTeam(models.Model):
-	year=customDateField(auto_now=False)
+	year=models.CharField(max_length=4)
 	def __str__(self):
 		return f'{self.id}-{self.year}'
 
