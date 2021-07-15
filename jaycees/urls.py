@@ -24,6 +24,7 @@ urlpatterns = [
     path('',include('blog.urls')),
     path('',include('members.urls')),
     path('',include('contact.urls')),
+    path('',include('gallery.urls')),
 ]
 
 if settings.DEBUG == True:
