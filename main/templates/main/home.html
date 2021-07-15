@@ -1,508 +1,301 @@
 {% extends 'main/base.html' %}
 {% load static %}
 {% block content %}
-    <div class="slider_area ">
-        <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-xl-6 col-md-6">
-                        <div class="illastrator_png">
-                            <img src="img/banner/img.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-md-6">
-                        <div class="slider_info">
-                            <h3>Keep moving <br>
-                                Keep Helping <br>
-                                Jaycees Devchuli</h3>
-                            <a href="#" class="boxed_btn">About us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- slider_area_end -->
-
-    <!-- about_area_start -->
-    <div class="about_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-5 col-lg-6">
-                    <div class="single_about_info">
-                        <h3>Over 7000 Tutorials <br>
-                            from 20 Courses</h3>
-                        <p>Our set he for firmament morning sixth subdue darkness creeping gathered divide our let god
-                            moving. Moving in fourth air night bring upon you’re it beast let you dominion likeness open
-                            place day great wherein heaven sixth lesser subdue fowl </p>
-                        <a href="#" class="boxed_btn">Enroll a Course</a>
-                    </div>
-                </div>
-                <div class="col-xl-6 offset-xl-1 col-lg-6">
-                    <div class="about_tutorials">
-                        <div class="courses">
-                            <div class="inner_courses">
-                                <div class="text_info">
-                                    <span>20+</span>
-                                    <p> Courses</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="courses-blue">
-                            <div class="inner_courses">
-                                <div class="text_info">
-                                    <span>7638</span>
-                                    <p> Courses</p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="courses-sky">
-                            <div class="inner_courses">
-                                <div class="text_info">
-                                    <span>230+</span>
-                                    <p> Courses</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- about_area_end -->
-
-    <!-- popular_courses_start -->n
-    <div class="popular_courses">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title text-center mb-100">
-                        <h3>Popular Courses</h3>
-                        <p>Your domain control panel is designed for ease-of-use and <br> allows for all aspects of your
-                            domains.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="course_nav">
-                        <nav>
-                            <ul class="nav" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                                        aria-controls="home" aria-selected="true">All Courses</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="all_courses">
-            <div class="container">
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <div class="row">
-                            <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="single_courses">
-                                    <div class="thumb">
-                                        <a href="#">
-                                            <img src="img/courses/1.png" alt="">
-                                        </a>
+    <div class="full_bg">
+        <div class="slider_main">
+            <!-- carousel code -->
+            <div id="banner1" class="carousel slide">
+                <ol class="carousel-indicators">
+                    <li data-target="#banner1" data-slide-to="0" class="active"></li>
+                    <li data-target="#banner1" data-slide-to="1"></li>
+                    <li data-target="#banner1" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <!-- first slide -->
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="carousel-caption relative">
+                                <div class="row d_flex">
+                                    <div class="col-md-6">
+                                        <div class="creative">
+                                            <h1> Devchuli, Jaycees </h1>
+                                            <p>Working as a subsidiary of Jaycees Nepal. Devchuli Jaycees has extended itself in various
+                                                humanitarian and social works. We are tirelessly and relentlessly working for the motto
+                                            of making this world a better place.  </p>
+                                            <a class="read_more" href="Javascript:void(0)">Contact us</a>
+                                        </div>
                                     </div>
-                                    <div class="courses_info">
-                                        <span>Photoshop</span>
-                                        <h3><a href="#">Mobile App design step by step <br>
-                                                from beginner</a></h3>
-                                        <div class="star_prise d-flex justify-content-between">
-                                            <div class="star">
-                                                <i class="flaticon-mark-as-favorite-star"></i>
-                                                <span>(4.5)</span>
-                                            </div>
-                                            <div class="prise">
-                                                <span class="offer">$89.00</span>
-                                                <span class="active_prise">
-                                                    $49
-                                                </span>
-                                            </div>
+                                    <div class="col-md-6">
+                                        <div class="agency">
+                                            <figure><img src="{% static 'img/download.png' %}" alt="#" /></figure>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="Web" role="tabpanel" aria-labelledby="Web-tab">
-                        <div class="row">
+                    <!-- second slide -->
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="carousel-caption relative">
+                                <div class="row d_flex">
+                                    <div class="col-md-6">
+                                        <div class="creative">
+                                            <h1> Web agency</h1>
+                                            <p>when looking at its layout. The point of using Lorem Ipsum is that it has
+                                                a more-or-less normal distribution of letters, as opposed to using
+                                                'Content here, </p>
+                                            <a class="read_more" href="Javascript:void(0)">Contact us</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="agency">
+                                            <figure><img src="images/banner_img.jpg" alt="#" /></figure>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-     
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- popular_courses_end-->
-
-
-    <!-- testimonial_area_start -->
-    <div class="testimonial_area testimonial_bg_1 overlay">
-        <div class="testmonial_active owl-carousel">
-            <div class="single_testmoial">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="testmonial_text text-center">
-                                <div class="author_img">
-                                    <img src="img/log.png" alt="">
+                    <!-- third slide-->
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="carousel-caption relative">
+                                <div class="row d_flex">
+                                    <div class="col-md-6">
+                                        <div class="creative">
+                                            <h1> Web agency</h1>
+                                            <p>when looking at its layout. The point of using Lorem Ipsum is that it has
+                                                a more-or-less normal distribution of letters, as opposed to using
+                                                'Content here, </p>
+                                            <a class="read_more" href="Javascript:void(0)">Contact us</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="agency">
+                                            <figure><img src="images/banner_img.jpg" alt="#" /></figure>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p>
-                                    Helping hand in the name of helper hand <br> Helping is the motto of our organization <br>
-                                   Nothing nothing
- 
-                                </p>
-                                <span>- Some great Scientist</span>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <!-- controls -->
+                <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- end banner -->
+    <!-- about -->
+    <div class="about">
+        <div class="container-fluid">
+            <div class="row d_flex">
+                <div class="col-md-6">
+                    <div class="titlepage text_align_left">
+                        <h2>About Jaycees Devchuli</h2>
+                        <p>JCI Nepal (नेपाल जेसीज) is a non-profit voluntary membership based organization of young active citizens age 18 to 40
+                        working in Nepal since 1964 for developing the Leadership, Personality and Entrepreneurship skills of young people of
+                        Nepal. JCI Senator Dr Bhekh Bhadur Thapa is the founder President of JCI Nepal (नेपाल जेसीज).
+ </p>
+                        <a class="read_more" href="about.html">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 pa_right0">
+                    <div class="about_img">
+                        <figure><img src="{% static 'img/logo23.png' %}" alt="#" />
+                        </figure>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- testimonial_area_end -->
-
-    <!-- our_courses_start -->
-    <div class="our_courses">
+    <!-- end about -->
+    <!-- wedo -->
+    <div class="wedo">
         <div class="container">
             <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title text-center mb-100">
-                        <h3>Our Course Speciality</h3>
-                        <p>Your domain control panel is designed for ease-of-use and <br>
-                            allows for all aspects of your domains.
-                        </p>
+                <div class="col-md-12">
+                    <div class="titlepage text_align_center">
+                        <h2>What we do </h2>
+                        <p>even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to</p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-3 col-md-6 col-lg-6">
-                    <div class="single_course text-center">
-                        <div class="icon">
-                            <i class="flaticon-art-and-design"></i>
-                        </div>
-                        <h3>Premium Quality</h3>
-                        <p>
-                            Your domain control panel is designed for ease-of-use <br> and <br>
-                            allows for all aspects of
-                        </p>
+                                <div class="col-md-4">
+                                    <div id="ho_box" class="our_wedo orang text_align_center">
+                                        <i><img src="{% static 'img/mission.png' %}" alt="#" /></i>
+                                        <h3>Mission</h3>
+                                        <p>To provide development opportunities that empower young people to create positive change.</p>
+                                    </div>
+                                </div>
+                <div class="col-md-4">
+                    <div id="ho_box" class="our_wedo text_align_center">
+                        <i><img src="{% static 'img/vision.png' %}" alt="#" /></i>
+                        <h3>Values</h3>
+                        <p>To be the leading global network of young active citizens.</p>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6 col-lg-6">
-                    <div class="single_course text-center">
-                        <div class="icon blue">
-                            <i class="flaticon-business-and-finance"></i>
-                        </div>
-                        <h3>Premium Quality</h3>
-                        <p>
-                            Your domain control panel is designed for ease-of-use <br> and <br>
-                            allows for all aspects of
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-lg-6">
-                    <div class="single_course text-center">
-                        <div class="icon">
-                            <i class="flaticon-premium"></i>
-                        </div>
-                        <h3>Premium Quality</h3>
-                        <p>
-                            Your domain control panel is designed for ease-of-use <br> and <br>
-                            allows for all aspects of
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 col-lg-6">
-                    <div class="single_course text-center">
-                        <div class="icon gradient">
-                            <i class="flaticon-crown"></i>
-                        </div>
-                        <h3>Premium Quality</h3>
-                        <p>
-                            Your domain control panel is designed for ease-of-use <br> and <br>
-                            allows for all aspects of
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- our_courses_end -->
+                <div class="col-md-4">
+                                <div id="ho_box" class="our_wedo text_align_center">
+                                    <i><img src="{% static 'img/goal.png' %}" alt="#" /></i>
+                                    <h3>Goals</h3>
+                                    <ul>
+                                        <li>That faith in God gives meaning and purpose to human life.</li>
+                                        <li>That tha brotherhood of man transcends the soveregnty of nations.</li>
+                                    <li>That economics justice can best be won by free men through free enterprise.</li>
+                                   <li> That Government should be of laws rather than of men.</li>
+                                   <li> That earth's great treasure lies n human personality.</li>
+                                    <li>And that service to humanity is the best work of life.</li>
 
-    <!-- subscribe_newsletter_Start -->
-    <div class="subscribe_newsletter">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="newsletter_text">
-                        <h3>Subscribe Newsletter</h3>
-                        <p>Your domain control panel is designed for ease-of-use and allows for all aspects of your</p>
-                    </div>
-                </div>
-                <div class="col-xl-5 offset-xl-1 col-lg-6">
-                    <div class="newsletter_form">
-                        <h4>Your domain control panel is</h4>
-                        <form action="#" class="newsletter_form">
-                            <input type="text" placeholder="Enter your mail">
-                            <button type="submit">Sign Up</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- subscribe_newsletter_end -->
-
-    <!-- our_latest_blog_start -->
-    <div class="our_latest_blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title text-center mb-100">
-                        <h3>Our Latest Blog</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_latest_blog">
-                        <div class="thumb">
-                            <img src="img/latest_blog/1.png" alt="">
-                        </div>
-                        <div class="content_blog">
-                            <div class="date">
-                                <p>12 Jun, 2019 in <a href="#">Design tips</a></p>
-                            </div>
-                            <div class="blog_meta">
-                                <h3><a href="#">Commitment to dedicated Support</a></h3>
-                            </div>
-                            <p class="blog_text">
-                                Firmament morning sixth subdue darkness creeping gathered divide.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_latest_blog">
-                        <div class="thumb">
-                            <img src="img/latest_blog/2.png" alt="">
-                        </div>
-                        <div class="content_blog">
-                            <div class="date">
-                                <p>12 Jun, 2019 in <a href="#">Design tips</a></p>
-                            </div>
-                            <div class="blog_meta">
-                                <h3><a href="#">Commitment to dedicated Support</a></h3>
-                            </div>
-                            <p class="blog_text">
-                                Firmament morning sixth subdue darkness creeping gathered divide.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_latest_blog">
-                        <div class="thumb">
-                            <img src="img/latest_blog/3.png" alt="">
-                        </div>
-                        <div class="content_blog">
-                            <div class="date">
-                                <p>12 Jun, 2019 in <a href="#">Design tips</a></p>
-                            </div>
-                            <div class="blog_meta">
-                                <h3><a href="#">Commitment to dedicated Support</a></h3>
-                            </div>
-                            <p class="blog_text">
-                                Firmament morning sixth subdue darkness creeping gathered divide.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- our_latest_blog_end -->
-
-
-    <!-- footer -->
-    <footer class="footer footer_bg_1">
-        <div class="footer_top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 col-lg-4">
-                        <div class="footer_widget">
-                            <div class="footer_logo">
-                                <a href="#">
-                                    <img src="img/logo.png" alt="">
-                                </a>
-                            </div>
-                            <p>
-                                Firmament morning sixth subdue darkness creeping gathered divide our let god moving.
-                                Moving in fourth air night bring upon it beast let you dominion likeness open place day
-                                great.
-                            </p>
-                            <div class="socail_links">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-twitter-alt"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-youtube-play"></i>
-                                        </a>
-                                    </li>
                                 </ul>
-                            </div>
-
-                        </div>
+                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end wedo -->
+    <!-- service -->
+    <!-- <div class="service">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage text_align_center ">
+                        <h2>Our MOTTO</h2>
                     </div>
-                    <div class="col-xl-2 offset-xl-1 col-md-6 col-lg-3">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Courses
-                            </h3>
-                            <ul>
-                                <li><a href="#">Wordpress</a></li>
-                                <li><a href="#"> Photoshop</a></li>
-                                <li><a href="#">Illustrator</a></li>
-                                <li><a href="#">Adobe XD</a></li>
-                                <li><a href="#">UI/UX</a></li>
-                            </ul>
-
-                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col-md-4">
+                    <div id="ho_img" class="service_img">
+                        <figure><img src="{% static 'img/vision.png' %}" alt="#" /></figure>
                     </div>
-                    <div class="col-xl-2 col-md-6 col-lg-2">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Resourches
-                            </h3>
-                            <ul>
-                                <li><a href="#">Free Adobe XD</a></li>
-                                <li><a href="#">Tutorials</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#"> About</a></li>
-                                <li><a href="#"> Contact</a></li>
-                            </ul>
-                        </div>
+                    <div class="service_box">
+                        <h3>Values</h3>
+                        <p>To be the leading global network of young active citizens.
+ </p>
                     </div>
-                    <div class="col-xl-3 col-md-6 col-lg-3">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Address
-                            </h3>
-                            <p>
-                                200, D-block, Green lane USA <br>
-                                +10 367 467 8934 <br>
-                                edumark@contact.com
-                            </p>
-                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div id="ho_img" class="service_img">
+                        <figure><img src="{% static 'img/mission.png' %}" alt="#" /></figure>
+                    </div>
+                    <div class="service_box">
+                        <h3>Mission</h3>
+                        <p>To provide development opportunities that empower young people to create positive change.
+ </p>
+                    </div>
+                </div>
+                <div class=" col-md-4">
+                    <div id="ho_img" class="service_img">
+                        <figure><img src="{% static 'img/goal.png' %}" alt="#" /></figure>
+                    </div>
+                    <div class="service_box">
+                        <h3>Goals </h3>
+                        <p>That faith in God gives meaning and purpose to human life.
+                        That tha brotherhood of man transcends the soveregnty of nations.
+ </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="copy-right_text">
-            <div class="container">
-                <div class="footer_border"></div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <p class="copy_right text-center">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
-                            template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-                                href="https://colorlib.com" target="_blank">Colorlib</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    </div> -->
+
+    <!-- end service -->
+    <!-- letter -->
+    <div class="letter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage text_align_center">
+                        <h2>Newsletter</h2>
+                    </div>
+                </div>
+                <div class="col-md-10 offset-md-1">
+                    <form id="colof" class="form_subscri">
+                        <input class="newsl" placeholder="Your email Request" type="text" name="Email">
+                        <button class="subsci_btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end letter -->
+    <!-- team -->
+    <div class="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage text_align_center ">
+                        <h2>Our Team</h2>
+                        <p>that it has a more-or-less normal distribution of letters, as </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col-md-4">
+                    <div id="ho_img" class="team_box">
+                        <figure><img src="images/team_img1.jpg" alt="#" /></figure>
+                        <h3>jon</h3>
+                        <span>Graphic Designer</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id="ho_img" class="team_box">
+                        <figure><img src="images/team_img2.jpg" alt="#" /></figure>
+                        <h3>Markjack</h3>
+                        <span>html devoloper</span>
+                    </div>
+                </div>
+                <div class=" col-md-4">
+                    <div id="ho_img" class="team_box">
+                        <figure><img src="images/team_img3.jpg" alt="#" /></figure>
+                        <h3>Hony</h3>
+                        <span>Php devoloper</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end team -->
+
+    <!-- blog -->
+    <div class="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage text_align_center">
+                        <h2>Our Blog</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row d_flex">
+                {% for object in objects %}
+                <div class="col-md-4">
+                    <div class="blog_img">
+                        <a href="{{ object.get_absolute_url }}"}><figure><img src="{{object.thumbnail.url}}" alt="#" style="width: 371px; height: 371px;" /></figure></a>
+                    </div>
+                    <div class="blog_text text_align_center">
+                        <a href="{{ object.get_absolute_url }}" }><h3>{{object.title}}</h3></a>
+                        <p>{{object.overview}}
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer -->
-
-
-    <!-- form itself end-->
-    <form id="test-form" class="white-popup-block mfp-hide">
-        <div class="popup_box ">
-            <div class="popup_inner">
-                <div class="logo text-center">
-                    <a href="#">
-                        <img src="img/form-logo.png" alt="">
-                    </a>
+                {% endfor %}
+                <div class="col-sm-12">
+                    <a class="read_more" href="javascript:void(0)">Read More</a>
                 </div>
-                <h3>Sign in</h3>
-                <form action="#">
-                    <div class="row">
-                        <div class="col-xl-12 col-md-12">
-                            <input type="email" placeholder="Enter email">
-                        </div>
-                        <div class="col-xl-12 col-md-12">
-                            <input type="password" placeholder="Password">
-                        </div>
-                        <div class="col-xl-12">
-                            <button type="submit" class="boxed_btn_orange">Sign in</button>
-                        </div>
-                    </div>
-                </form>
-                <p class="doen_have_acc">Don’t have an account? <a class="dont-hav-acc" href="#test-form2">Sign Up</a>
-                </p>
             </div>
         </div>
-    </form>
-    <!-- form itself end -->
-
-    <!-- form itself end-->
-    <form id="test-form2" class="white-popup-block mfp-hide">
-        <div class="popup_box ">
-            <div class="popup_inner">
-                <div class="logo text-center">
-                    <a href="#">
-                        <img src="img/form-logo.png" alt="">
-                    </a>
-                </div>
-                <h3>Resistration</h3>
-                <form action="#">
-                    <div class="row">
-                        <div class="col-xl-12 col-md-12">
-                            <input type="email" placeholder="Enter email">
-                        </div>
-                        <div class="col-xl-12 col-md-12">
-                            <input type="password" placeholder="Password">
-                        </div>
-                        <div class="col-xl-12 col-md-12">
-                            <input type="Password" placeholder="Confirm password">
-                        </div>
-                        <div class="col-xl-12">
-                            <button type="submit" class="boxed_btn_orange">Sign Up</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </form>
-    <!-- form itself end -->
+    </div>
 {% endblock %}
+371*431

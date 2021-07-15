@@ -1,0 +1,198 @@
+/*--------------------------------------------------------------------- 
+File Name: responsive.css 
+---------------------------------------------------------------------*/
+
+@media (min-width: 1343px) and (max-width: 1500px) {
+    ul.top_infomation li {
+        padding-right: 5px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1342px) {
+    ul.top_infomation li {
+        padding-right: 5px;
+        font-size: 16px;
+    }
+    ul.top_infomation li i {
+        margin-right: 1px;
+        width: 31px;
+        height: 31px;
+        line-height: 31px;
+    }
+    #banner1 .carousel-control-prev {left: 0%;}
+    #banner1 .carousel-control-next {right: 0%;}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .select_main .read_more {
+        display: none;
+    }
+    .site-navbar ul li {padding-right: 60px;}
+    ul.top_infomation li {
+        padding-right: 5px;
+        font-size: 16px;
+    }
+    ul.top_infomation li i {
+        margin-right: 5px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+    .creative h1 {
+        font-size: 60px;
+    }
+      #banner1 .carousel-control-prev {left: 0%;}
+    #banner1 .carousel-control-next {right: 0%;}
+   
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    ul.top_infomation {
+        display: none;
+    }
+    .select_main {
+        justify-content: flex-end;
+    }
+    #banner1 .carousel-control-prev {left: 0%;}
+    #banner1 .carousel-control-next {right: 0%;}
+    .creative h1 {
+        font-size: 45px;
+        line-height: 52px;
+    }
+    .creative p {
+        padding: 20px 0 30px 0;
+    }
+    .service_box h3 {font-size: 18px; line-height: 22px;}
+    .d_none {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    ul.top_infomation {
+        display: none;
+    }
+    .select_main {
+        justify-content: flex-end;
+    }
+    
+   .pa_right0 {
+    padding-right: 15px; padding-top: 30px;
+}
+    .titlepage h2 {
+        font-size: 37px;
+        line-height: 40px;
+    }
+    .about .titlepage {max-width: inherit;}
+    ul.conta {
+        display: inherit;
+    }
+/* navbar css for mobile start */
+    .nav-toggler {
+        display: block;
+        position: absolute;
+        right: 15px;
+        z-index: 99999;
+    }
+    .site-navbar {
+    min-height: 25px;
+}
+    .site-navbar ul {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 49px;
+        flex-direction: column;
+        align-items: center;
+        background-color: #dc2727;
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s;
+        z-index: 99999;
+        box-shadow: 0 0 10px rgb(192, 190, 182);
+    }
+    .site-navbar ul li {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+    }
+    .site-navbar ul li a {
+        padding: 25px 25px 0px 25px;
+    }
+    .site-navbar ul.open {
+        max-height: 100vh;
+        padding-bottom: 25px;
+        overflow: visible;
+    }
+    /* navbar css for mobile end */
+    .d_none,
+    ul.top_infomation {
+        display: none !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .select_main {
+        display: none;
+    }
+    .logo {
+        text-align: center;
+    }
+    .full_bg {padding-top: 80px;}
+    .creative h1 {
+        font-size: 38px;
+        line-height: 45px;
+    }
+    
+     .about .titlepage {max-width: inherit;}
+   .main_form {padding: 50px 20px;}
+      .pa_right0 {
+    padding-right: 15px; padding-top: 30px;
+}
+    .titlepage h2 {
+        line-height: 40px;
+        font-size: 35px;
+    }
+    /* navbar css for mobile start */
+   
+    .nav-toggler {
+        display: block;
+        position: absolute;
+        right: 15px;
+        z-index: 99999;
+    }
+    .site-navbar {
+    min-height: 25px;
+}
+    .site-navbar ul {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 49px;
+        flex-direction: column;
+        align-items: center;
+        background-color: #dc2727;
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s;
+        z-index: 99999;
+        box-shadow: 0 0 10px rgb(192, 190, 182);
+    }
+    .site-navbar ul li {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+    }
+    .site-navbar ul li a {
+        padding: 25px 25px 0px 25px;
+    }
+    .site-navbar ul.open {
+        max-height: 100vh;
+        padding-bottom: 25px;
+        overflow: visible;
+    }
+    .d_none,
+    ul.top_infomation {
+        display: none !important;
+    }
+}

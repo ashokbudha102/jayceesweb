@@ -1,247 +1,51 @@
 {% extends 'main/base.html' %}
 {% load static %}
 {% block content %}
-    <div class="bradcam_area breadcam_bg overlay2">
-        <h3>News and Events 
-            <br> Devchuli Jaycees 
-        </h3>
-    </div>
-    <!-- bradcam_area_end -->
-
-
-    <!--================Blog Area =================-->
-    <section class="blog_area section-padding">
+    <!-- end header inner -->
+    <!-- blog -->
+    <div class="blog">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mb-5 mb-lg-0">
-                    <div class="blog_left_sidebar">
-                        {% for post in posts %}
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="{{post.thumbnail.url}}" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="{{post.get_absolute_url}}">
-                                    <h2>{{post.title}}</h2>
-                                </a>
-                                <p>{{post.overview}}</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> {{post.author}}</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> {{post.comments}} Comments</a></li>
-                                </ul>
-                            </div>
-                        </article>
-                        {% endfor %}
-
-
-            <nav aria-label="Page navigation example">
-    <ul class="pagination pagination-template d-flex justify-content-center">
-        {% if queryset.has_previous %}
-        <li class="page-item"><a href="?{{ page_request_var }}={{ queryset.previous_page_number }}" class="page-link">
-                <i class="fa fa-angle-left"></i></a></li>
+                <div class="col-md-12">
+                    <div class="titlepage text_align_center">
+                        <h2>Our Blog</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row d_flex">
+                            {% for post in posts %}
+                <div class="col-md-4">
+                    <div class="blog_img">
+                        <a href='{{post.get_absolute_url}}'></a><figure><img src="{{post.thumbnail.url}}" alt="#" style="width: 371px; height: 371px;" /></figure>
+                    </div>
+                    <div class="blog_text text_align_center">
+                        <h3>{{post.title}}</h3>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+<div class="pagination" style="padding-left: 40%; padding-top: 20px; padding-bottom: 20px;">
+    <span class="step-links">
+        {% if posts.has_previous %}
+        <button class=" btn" style="background: #0097D9;"><a href="?page=1" style="color: black;">« first</a></button>
+        <button class=" btn" style="background: #0097D9;"><a href="?page={{ posts.previous_page_number }}"
+                style="color: black;">previous</a></button>
         {% endif %}
-        <li class="page-item"><a href="?{{ page_request_var }}={{ queryset.number }}" class="page-link active">{{
-                queryset.number }}</a></li>
-        {% if queryset.has_next %}
-        <li class="page-item"><a href="?{{ page_request_var }}={{ queryset.next_page_number }}" class="page-link"> <i
-                    class="fa fa-angle-right"></i></a></li>
+
+        <span class="current">
+            Page {{ posts.number }} of {{ posts.paginator.num_pages }}
+        </span>
+
+        {% if posts.has_next %}
+        <button class=" btn" style="background: #0097D9;"><a href="?page={{ posts.next_page_number }}"
+                style="color: black;">next</a></button>
+        <button class=" btn" style="background: #0097D9;"><a href="?page={{ posts.paginator.num_pages }}"
+                style="color: black;">last »</a></button>
         {% endif %}
-        </ul>   
-        </nav>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog_right_sidebar">
-                        <aside class="single_sidebar_widget search_widget">
-                            <form action="#">
-                                <div class="form-group">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder='Search Keyword'
-                                            onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = 'Search Keyword'">
-                                        <div class="input-group-append">
-                                            <button class="btn" type="button"><i class="ti-search"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                    type="submit">Search</button>
-                            </form>
-                        </aside>
+    </span>
+</div>
 
-                        <aside class="single_sidebar_widget popular_post_widget">
-                            <h3 class="widget_title">Recent Post</h3>
-                            <div class="media post_item">
-                                <img src="img/post/post_1.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>From life was you fish...</h3>
-                                    </a>
-                                    <p>January 12, 2019</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="img/post/post_2.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>The Amazing Hubble</h3>
-                                    </a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="img/post/post_3.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Astronomy Or Astrology</h3>
-                                    </a>
-                                    <p>03 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="img/post/post_4.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Asteroids telescope</h3>
-                                    </a>
-                                    <p>01 Hours ago</p>
-                                </div>
-                            </div>
-                        </aside>
-
-
-
-
-                        <aside class="single_sidebar_widget newsletter_widget">
-                            <h4 class="widget_title">Newsletter</h4>
-
-                            <form action="#">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" onfocus="this.placeholder = ''"
-                                        onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
-                                </div>
-                                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                    type="submit">Subscribe</button>
-                            </form>
-                        </aside>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================Blog Area =================-->
-
-    <!-- footer -->
-    <footer class="footer footer_bg_1">
-        <div class="footer_top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 col-lg-4">
-                        <div class="footer_widget">
-                            <div class="footer_logo">
-                                <a href="#">
-                                    <img src="img/logo.png" alt="">
-                                </a>
-                            </div>
-                            <p>
-                                Firmament morning sixth subdue darkness creeping gathered divide our let god moving.
-                                Moving in fourth air night bring upon it beast let you dominion likeness open place day
-                                great.
-                            </p>
-                            <div class="socail_links">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-twitter-alt"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-youtube-play"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-2 offset-xl-1 col-md-6 col-lg-3">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Courses
-                            </h3>
-                            <ul>
-                                <li><a href="#">Wordpress</a></li>
-                                <li><a href="#"> Photoshop</a></li>
-                                <li><a href="#">Illustrator</a></li>
-                                <li><a href="#">Adobe XD</a></li>
-                                <li><a href="#">UI/UX</a></li>
-                            </ul>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-md-6 col-lg-2">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Resourches
-                            </h3>
-                            <ul>
-                                <li><a href="#">Free Adobe XD</a></li>
-                                <li><a href="#">Tutorials</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#"> About</a></li>
-                                <li><a href="#"> Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 col-lg-3">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Address
-                            </h3>
-                            <p>
-                                200, D-block, Green lane USA <br>
-                                +10 367 467 8934 <br>
-                                edumark@contact.com
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copy-right_text">
-            <div class="container">
-                <div class="footer_border"></div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <p class="copy_right text-center">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
-                            template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-                                href="https://colorlib.com" target="_blank">Colorlib</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    {% endblock %}
-    <!-- footer -->
-    <!-- link that opens popup -->
+    <!-- pagination ends -->
+{% endblock %}
