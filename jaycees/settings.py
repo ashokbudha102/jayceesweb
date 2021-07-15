@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'members',
     'contact',
+    'gallery',
 ]
 
 MIDDLEWARE = [
