@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .forms import EmailForm
+from django.core.mail import send_mail
+from django.contrib import messages
+from jaycees.settings import EMAIL_HOST_USER
 
 # Create your views here.
 def contact(request):
@@ -12,9 +15,9 @@ def contact(request):
         name = str(sub['name'].value())
         message = "Name:"+name+'\n'+"SENDER:"+recepient+'\n'+"MESSAGE:"+message
         send_mail(subject,
-                  message, EMAIL_HOST_USER, ['ashok.budha2015@gmail.com'], fail_silently=False)
+                  message, EMAIL_HOST_USER, ['devchulijci44@gmail.com'], fail_silently=False)
         messages.success(request, f'Your email has been sent !!')
-        return redirect('blog_index')
+        return redirect('/')
     return render(request,'contact.html',{'form':sub})
 
 def about(request):
