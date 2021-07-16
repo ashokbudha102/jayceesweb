@@ -24,6 +24,22 @@ class membersRobo(models.Model):
 
 	def __str__(self):
 		return f'{self.name}-{self.status}'
+	
+	@property
+	def ordering(self):
+		statusDict = {"President": 1, "Vice-President": 2, "General Secretriat": 3, "Treasurer":4, "Member":5}
+		if self.status in statusDict:
+			return statusDict[self.status]
+		else:
+			return 6
 
-	class Meta:
-		ordering = ['status']
+		# if self.status=="President":
+		# 	return 1
+		# elif self.status=="Vice-President":
+		# 	return 2
+		# elif self.status=="General Secretriat":
+		# 	return 3
+		# elif self.status=="Treasurer":
+		# 	return 4
+		# else:
+		# 	return 5
