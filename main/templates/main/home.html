@@ -24,7 +24,7 @@
                                             <p>Working as a subsidiary of Jaycees Nepal. Devchuli Jaycees has extended itself in various
                                                 humanitarian and social works. We are tirelessly and relentlessly working for the motto
                                             of making this world a better place.  </p>
-                                            <a class="read_more" href="Javascript:void(0)">Contact us</a>
+                                            <a class="read_more" href="{% url 'contact' %}">Contact us</a>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -38,14 +38,14 @@
                     </div>
                 </div>
                 <!-- controls -->
-                <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+                <!-- <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
                     <i class="fa fa-arrow-left" aria-hidden="true"></i>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
                     <i class="fa fa-arrow-right" aria-hidden="true"></i>
                     <span class="sr-only">Next</span>
-                </a>
+                </a> -->
             </div>
         </div>
     </div>
@@ -61,7 +61,7 @@
                         working in Nepal since 1964 for developing the Leadership, Personality and Entrepreneurship skills of young people of
                         Nepal. JCI Senator Dr Bhekh Bhadur Thapa is the founder President of JCI Nepal (नेपाल जेसीज).
  </p>
-                        <a class="read_more" href="about.html">Read More</a>
+                        <a class="read_more" href="{% url 'about' %}">Read More</a>
                     </div>
                 </div>
                 <div class="col-md-6 pa_right0">
@@ -75,7 +75,7 @@
     </div>
     <!-- end about -->
     <!-- wedo -->
-    <div class="wedo">
+    <div class="wedo" style="background-color: rgba(242, 245, 250, 0.801); ">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -96,95 +96,43 @@
                 <div class="col-md-4">
                     <div id="ho_box" class="our_wedo text_align_center">
                         <i><img src="{% static 'img/vision.png' %}" alt="#" /></i>
-                        <h3>Values</h3>
+                        <h3>Values</h3><br>
                         <p>To be the leading global network of young active citizens.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                                <div id="ho_box" class="our_wedo text_align_center">
-                                    <i><img src="{% static 'img/goal.png' %}" alt="#" /></i>
-                                    <h3>Goals</h3>
-                                    <ul>
-                                        <li>That faith in God gives meaning and purpose to human life.</li>
-                                        <li>That tha brotherhood of man transcends the soveregnty of nations.</li>
-                                    <li>That economics justice can best be won by free men through free enterprise.</li>
-                                   <li> That Government should be of laws rather than of men.</li>
-                                   <li> That earth's great treasure lies n human personality.</li>
-                                    <li>And that service to humanity is the best work of life.</li>
-
-                                </ul>
-                                </div>
+                <div id="ho_box" class="our_wedo text_align_center">
+                    <i><img src="{% static 'img/goal.png' %}" alt="#" /></i>
+                    <!-- start  -->
+                    <h3>Goals</h3><br><br>
+                    <p>
+                        <a data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">click here to read our goals</a><br>
+                    </p>
+                      <div class="row">
+                        <div class="col">
+                          <div class="collapse multi-collapse" id="multiCollapseExample1">
+                            <div class="card card-body" style="background-color: #0097D9; color: white;">
+                            <ul>
+                            <li>That faith in God gives meaning and purpose to human life.</li>
+                            <li>That tha brotherhood of man transcends the soveregnty of nations.</li>
+                            <li>That economics justice can best be won by free men through free enterprise.</li>
+                            <li>That Government should be of laws rather than of men.</li>
+                            <li>That earth's great treasure lies n human personality.</li>
+                            <li>And that service to humanity is the best work of life.</li>
+                            </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- end  -->
+                </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- end wedo -->
-    <!-- service -->
-    <!-- <div class="service">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage text_align_center ">
-                        <h2>Our MOTTO</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class=" col-md-4">
-                    <div id="ho_img" class="service_img">
-                        <figure><img src="{% static 'img/vision.png' %}" alt="#" /></figure>
-                    </div>
-                    <div class="service_box">
-                        <h3>Values</h3>
-                        <p>To be the leading global network of young active citizens.
- </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div id="ho_img" class="service_img">
-                        <figure><img src="{% static 'img/mission.png' %}" alt="#" /></figure>
-                    </div>
-                    <div class="service_box">
-                        <h3>Mission</h3>
-                        <p>To provide development opportunities that empower young people to create positive change.
- </p>
-                    </div>
-                </div>
-                <div class=" col-md-4">
-                    <div id="ho_img" class="service_img">
-                        <figure><img src="{% static 'img/goal.png' %}" alt="#" /></figure>
-                    </div>
-                    <div class="service_box">
-                        <h3>Goals </h3>
-                        <p>That faith in God gives meaning and purpose to human life.
-                        That tha brotherhood of man transcends the soveregnty of nations.
- </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
     <!-- end service -->
-    <!-- letter -->
-    <div class="letter">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage text_align_center">
-                        <h2>Newsletter</h2>
-                    </div>
-                </div>
-                <div class="col-md-10 offset-md-1">
-                    <form id="colof" class="form_subscri">
-                        <input class="newsl" placeholder="Your email Request" type="text" name="Email">
-                        <button class="subsci_btn">Send</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end letter -->
+    
     <!-- team -->
     <div class="team">
         <div class="container">
@@ -199,21 +147,21 @@
             <div class="row">
                 <div class=" col-md-4">
                     <div id="ho_img" class="team_box">
-                        <figure><img src="{% static 'img/bhekhthapa.jpg' %}" alt="#" /></figure>
+                        <figure><img src="{% static 'img/bhekhthapa.jpg' %}" alt="#" style="border-radius: 20px;" /></figure>
                         <h3>Dr. Bhekh Bahadur Thapa</h3>
                         <span>Founder, Nepal Jaycees</span>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div id="ho_img" class="team_box">
-                        <figure><img src="{% static 'img/chairnepal.jpg' %}" alt="#" style="width: 330px; height: 386px;" /></figure>
+                        <figure><img src="{% static 'img/chairnepal.jpg' %}" alt="#" style="width: 330px; height: 386px; border-radius: 20px;" /></figure>
                         <h3>JCI Sen. Aruneshwar Khanal</h3>
                         <span>National President, Jaycees</span>
                     </div>
                 </div>
                 <div class=" col-md-4">
                     <div id="ho_img" class="team_box">
-                        <figure><img src="{% static 'img/mama1.png' %}" alt="#" style="width: 330px; height: 386px;" /></figure>
+                        <figure><img src="{% static 'img/mama1.png' %}" alt="#" style="width: 330px; height: 386px; border-radius: 20px;" /></figure>
                         <h3>JCI Nilkantha Pokharel </h3>
                         <span>President, Jaycees Devchuli</span>
                     </div>
@@ -253,4 +201,28 @@
             </div>
         </div>
     </div>
+    <!-- letter -->
+    <div class="letter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage text_align_center">
+                        <h2 style="color: black;">JCI Partners</h2>
+                    </div>
+                </div>
+                <div class="col-md-10 offset-md-1">
+                    <section  style="margin-left: 15%;">
+                        <div class="logo-container">
+                          <img class="logo" src="{% static 'img/UNESCO.png' %}" style="width:100px; height:100px; margin: 7px; ">
+                          <img class="logo" src="{% static 'img/ECOSOC.png' %}" style="width:100px; height:100px; margin: 7px;">
+                          <img class="logo" src="{% static 'img/NIPPON.png' %}" style="width:100px; height:100px; margin: 7px;">
+                          <img class="logo" src="{% static 'img/ACTION.png' %}" style="width:100px; height:100px; margin: 7px;">
+                          <img class="logo" src="{% static 'img/GLOBAL.png' %}" style="width:170px; height:100px; margin: 7px;">
+                          </div>
+                        </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end letter -->
 {% endblock %}

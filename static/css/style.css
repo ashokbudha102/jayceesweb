@@ -769,7 +769,7 @@ ul.email li a i {
 /** letter section **/
 
 .letter {
-    background: #3B66B1;
+    background: rgba(242, 245, 250, 0.801);
     padding-top: 80px;
     padding-bottom: 80px;
     margin-top: 80px;

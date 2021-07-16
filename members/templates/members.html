@@ -4,12 +4,12 @@
 {% block status %}active{% endblock %}
 
 {% block content %}
-<h1>Devchuli Jaycees Team {{age}}</h1>
+<b><h1 style="text-align: center; margin-top: 50px; font-size: 40px;">Devchuli Jaycees Team {{age}}</h1></b>
             <div class="row">
                 {% for member in members %}
                 <div class=" col-md-4">
                     <div id="ho_img" class="team_box">
-                        <figure><img src="{{member.photo.url}}" alt="#" style='width: 271px; height: 317px;' /></figure>
+                        <figure><img src="{{member.photo.url}}" alt="#" style='width: 271px; height: 317px; border-radius: 20px;'/></figure>
                         <h3>{{member.name}}</h3>
                         <span>{{member.status}}</span>
                     </div>
