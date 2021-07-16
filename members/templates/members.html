@@ -1,1 +1,16 @@
-hello we will complete this later 
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<h1>Devchuli Jaycees Team {{age}}</h1>
+            <div class="row">
+                {% for member in members %}
+                <div class=" col-md-4">
+                    <div id="ho_img" class="team_box">
+                        <figure><img src="{{member.photo.url}}" alt="#" style='width: 271px; height: 317px;' /></figure>
+                        <h3>{{member.name}}</h3>
+                        <span>{{member.status}}</span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+{% endblock %}

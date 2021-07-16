@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<div style="margin-left: 5%; margin-right: 5%; margin-top: 2.5%;">
+    <h1 style="text-align: center; font-size: 40px;"> Jaycees Devchuli Team throughout the Years </h1>
+    <hr>
+{% for post in years %}
+<div class="card">
+    <div class="card-header">
+        Jaycess {{post.year}}
+    </div>
+    <div class="card-body">
+        <h3 class="card-title"><b>TEAM {{post.year}}</b></h3>
+        <a href="{% url 'members' post.id %}" class="btn btn-primary">View Full Team</a>
+    </div>
+</div>
+        <br>
+{% endfor %}
+{% endblock %}

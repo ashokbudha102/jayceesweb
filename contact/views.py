@@ -16,3 +16,6 @@ def contact(request):
         messages.success(request, f'Your email has been sent !!')
         return redirect('blog_index')
     return render(request,'contact.html',{'form':sub})
+
+def about(request):
+    return render(request, 'about.html',{})
