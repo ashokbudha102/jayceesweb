@@ -2,18 +2,8 @@ from django.db import models
 
 # Create your models here.
 
-
-class customDateField(models.DateField):
-	def value_to_string(self, obj):
-		val = self.value_from_object(obj)
-		if val:
-			val.replace(day=0, month=0)
-			return val.isoformat()
-		return ''
-
-
 class yearTeam(models.Model):
-	year=customDateField(auto_now=False)
+	year=models.CharField(max_length=4)
 	def __str__(self):
 		return f'{self.id}-{self.year}'
 
@@ -34,6 +24,22 @@ class membersRobo(models.Model):
 
 	def __str__(self):
 		return f'{self.name}-{self.status}'
+	
+	@property
+	def ordering(self):
+		statusDict = {"President": 1, "Vice-President": 2, "General Secretriat": 3, "Treasurer":4, "Member":5}
+		if self.status in statusDict:
+			return statusDict[self.status]
+		else:
+			return 6
 
-	class Meta:
-		ordering = ['status']
+		# if self.status=="President":
+		# 	return 1
+		# elif self.status=="Vice-President":
+		# 	return 2
+		# elif self.status=="General Secretriat":
+		# 	return 3
+		# elif self.status=="Treasurer":
+		# 	return 4
+		# else:
+		# 	return 5
