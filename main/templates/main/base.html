@@ -36,7 +36,9 @@
                 <div class="row d_flex">
                     <div class=" col-md-3 col-sm-4">
                         <div class="logo">
-                            <a href="{% url 'home' %}">Jaycees</a>
+                            <!-- <a href="{% url 'home' %}">Jaycees</a> -->
+                            <a href="{% url 'home' %}"><img src="{% static 'img/devchuli.png' %}" alt="logo" style="width:220px; height:150px;"></a>
+                            
                         </div>
                     </div>
                     <div class="col-md-9 col-sm-8">
@@ -67,6 +69,7 @@
                                     <li><a class="{% block status0 %}{% endblock %}" href="{% url 'home' %}">Home</a></li>
                                     <li><a class="{% block status1 %}{% endblock %}" href="{% url 'about' %}">About</a></li>
                                     <li><a class="{% block status2 %}{% endblock %}" href="{% url 'year' %}">Team</a></li>
+                                    <li><a class="{% block status6 %}{% endblock %}" href="{% url 'gallery' %}">Gallery</a></li>
                                     <li><a class="{% block status3 %}{% endblock %}" href="{% url 'blogindex' %}">News</a></li>
                                     <li><a class="{% block status4 %}{% endblock %}" href="{% url 'events' %}">Events</a></li>
                                     <li><a class="{% block status5 %}{% endblock %}" href="{% url 'contact' %}">Contact us</a></li>
@@ -116,6 +119,7 @@
                                         <li> <a href="{% url 'home' %}">Home</a></li>
                                         <li> <a href="{% url 'about' %}">About Us</a></li>
                                         <li> <a href="{% url 'year' %}"> Team</a></li>
+                                        <li> <a href="{% url 'gallery' %}"> Gallery</a></li>
                                         <li> <a href="{% url 'blogindex' %}"> Blog</a></li>
                                         <li> <a href="{% url 'contact' %}"> Contact Us</a></li>
                                     </ul>
@@ -144,7 +148,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <p>© 2020 All Rights Reserved. Design by <a href="#"> SOHO AUTOMATIONS </a></p>
+                            <p>© 2020 All Rights Reserved. Design by <a href="#"> WEBCODERS </a></p>
                         </div>
                     </div>
                 </div>

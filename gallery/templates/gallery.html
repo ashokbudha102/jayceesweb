@@ -1,10 +1,12 @@
 {% extends 'main/base.html' %}
 {% load static %}
 {% block title %} Jaycees:About {% endblock %}
-{% block status1 %}active{% endblock %}
+{% block status6 %}active{% endblock %}
 
 {% block content %}
-<div id="carouselExampleIndicators" class="carousel slide" style='margin: 50px;' data-ride="carousel">
+<br>
+<h1 style="font-size: 40px; text-align: center;"><strong >Our Memories</strong> </h1>
+<div id="carouselExampleIndicators" class="carousel slide" style='margin-left: 15%; margin-right: 15%; margin-top: 50px;' data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -12,11 +14,11 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="{% static 'img/devchuli.png' %}" style='width:200px; height: 450px;' alt="First slide">
+            <img class="d-block w-100" src="{% static 'img/devchuli.png' %}" style='width:150px; height: 500px;  border-radius:20px;' alt="First slide">
         </div>
         {% for image in images %}
         <div class="carousel-item">
-            <img class="d-block w-100" src="{{image.image.url}}" style='width:200px; height: 450px;' alt="Second slide">
+            <img class="d-block w-100" src="{{image.image.url}}" style=' width:150px; height: 500px;  border-radius:20px;' alt="Second slide">
         </div>
         {% endfor %}
     </div>
