@@ -80,6 +80,8 @@
                 </div>
             </div>
         </div>
+
+
     </div>
         {% block content %}
         {% endblock %}
@@ -114,12 +116,11 @@
                                 <div class="hedingh3 text_align_left">
                                     <h3>Work Link</h3>
                                     <ul class="menu_footer">
-                                        <li> <a href="index.html">Home</a></li>
-                                        <li> <a href="about.html">About Us</a></li>
-                                        <li> <a href="service.html">Service</a></li>
-                                        <li> <a href="team.html"> Team</a></li>
-                                        <li> <a href="blog.html"> Blog</a></li>
-                                        <li> <a href="contact.html"> Contact Us</a></li>
+                                        <li> <a href="{% url 'home' %}">Home</a></li>
+                                        <li> <a href="{% url 'about' %}">About Us</a></li>
+                                        <li> <a href="{% url 'year' %}"> Team</a></li>
+                                        <li> <a href="{% url 'blogindex' %}"> Blog</a></li>
+                                        <li> <a href="{% url 'contact' %}"> Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -157,7 +158,7 @@
     <!-- Javascript files-->
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <!-- <script src="{% static 'js/jquery.min.js' %}"></script> -->
     <script src="{% static 'js/custom.js' %}"></script>
     
 

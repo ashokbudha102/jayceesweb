@@ -250,14 +250,14 @@
                 </div>
                 <div class="col-md-4">
                     <div id="ho_img" class="team_box">
-                        <figure><img src="{% static 'img/chairnepal.jpg' %}" alt="#" /></figure>
+                        <figure><img src="{% static 'img/chairnepal.jpg' %}" alt="#" style="width: 330px; height: 386px;" /></figure>
                         <h3>JCI Sen. Aruneshwar Khanal</h3>
                         <span>National President, Jaycees</span>
                     </div>
                 </div>
                 <div class=" col-md-4">
                     <div id="ho_img" class="team_box">
-                        <figure><img src="{% static 'img/mama1.png' %}" alt="#" /></figure>
+                        <figure><img src="{% static 'img/mama1.png' %}" alt="#" style="width: 330px; height: 386px;" /></figure>
                         <h3>JCI Nilkantha Pokharel </h3>
                         <span>President, Jaycees Devchuli</span>
                     </div>
@@ -294,9 +294,6 @@
                 <div class="col-sm-12">
                     <a class="read_more" href="javascript:void(0)">Read More</a>
                 </div>
-                {% for year in years %}
-                <a href='{% url "members" year.id %}'> {{year.year}}</a>]
-                {% endfor %}
             </div>
         </div>
     </div>
