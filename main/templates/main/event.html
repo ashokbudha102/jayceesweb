@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title  %} Events {% endblock %}
+{% block status4 %}active{% endblock %}
+{% block content %}
+<br><br>
+<h2 style="text-align:center; font-size: 40px;"><b>Important Events:</b></h2><br>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col" style="font-size:20px;">Time Added</th>
+        <th scope="col" style="font-size:20px;">Title</th>
+        <th scope="col" style="font-size:20px;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for file in files %}
+      <tr>
+        <th scope="row">{{ file.timeAdded }}</th>
+        <td>{{ file.title }}</td>
+        <td><a href="{{file.pdf_file.url}}"><span class="material-icons" style="font-size:40px;">preview</span></a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
