@@ -8,17 +8,17 @@
 <table class="table">
     <thead>
       <tr>
-        <th scope="col" style="font-size:20px;">Time Added</th>
-        <th scope="col" style="font-size:20px;">Title</th>
-        <th scope="col" style="font-size:20px;">Actions</th>
+        <th scope="col" style="font-size:20px; color: #0097D9;">Time Added</th>
+        <th scope="col" style="font-size:20px; color: #0097D9;">Title</th>
+        <th scope="col" style="font-size:20px; color: #0097D9;">Actions</th>
       </tr>
     </thead>
     <tbody>
     {% for file in files %}
       <tr>
-        <th scope="row">{{ file.timeAdded }}</th>
-        <td>{{ file.title }}</td>
-        <td><a href="{{file.pdf_file.url}}"><span class="material-icons" style="font-size:40px;">preview</span></a></td>
+        <th scope="row" style="font-size:20px;">{{ file.timeAdded }}</th>
+        <td style="font-size:20px;">{{ file.title }}</td>
+        <td style="font-size:20px;"><a href="{{file.pdf_file.url}}"><span class="material-icons" style="font-size:40px;">preview</span></a></td>
       </tr>
       {% endfor %}
     </tbody>
