@@ -4,6 +4,41 @@
 {% block status3 %}active{% endblock %}
 
 {% block content %}
+<style>
+    .pagination {
+    margin-top: 1em;
+}
+
+.pagination a {
+    text-decoration: none;
+}
+
+.pagination-number {
+    padding: 0.5em 0.8em;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #3354AA;
+}
+
+.pagination-number:hover,
+.pagination-current {
+    background-color: #0097D9;
+}
+
+.pagination-action {
+    margin: 0 0.1em;
+    display: inline-block;
+    padding: 0.5em 0.5em;
+    color: #B9B9B9;
+    font-size: 1.3em;
+}
+
+.pagination-action:hover,
+.pagination-previous,
+.pagination-next {
+    color: #3354AA;
+}
+</style>
     <!-- end header inner -->
     <!-- blog -->
     <div class="blog">
@@ -29,7 +64,7 @@
             </div>
         </div>
     </div>
-<div class="pagination" style="padding-left: 40%; padding-top: 20px; padding-bottom: 20px;">
+<!-- <div class="pagination" style="padding-left: 40%; padding-top: 20px; padding-bottom: 20px;">
     <span class="step-links">
         {% if posts.has_previous %}
         <button class=" btn" style="background: #0097D9;"><a href="?page=1" style="color: black;">« first</a></button>
@@ -48,7 +83,33 @@
                 style="color: black;">last »</a></button>
         {% endif %}
     </span>
-</div>
+</div> -->
+<div class="pagination" style="position: relative; height:60px;">
+    <div style="position: relative; left: 50%; transform: translateX(-50%);">
+      {% if posts.has_previous %}
+      <a class="pagination-action" href="?page=1">
+          <i class="fa fa-angle-double-left" aria-hidden="true"></i> </a>
+      <a class="pagination-action" href="?page={{ posts.previous_page_number }}">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+      </a>
+      {% endif %}
+      {% for num in posts.paginator.page_range %}
+          {% if posts.number == num %}
+              <span class="pagination-number pagination-current">{{ num }}</span>
+          {% elif num > posts.number|add:'-3' and num < posts.number|add:'3' %}
+              <a class="pagination-number" href="?page={{ num }}">{{ num }}</a>
+          {% endif %}
+      {% endfor %}
+      {% if posts.has_next %}
+          <a class="pagination-action" href="?page={{ posts.next_page_number }}">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </a>
+          <a class="pagination-action" href="?page={{ posts.paginator.num_pages }}">
+              <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+          </a>
+      {% endif %}
+    </div>
+  </div>
 
     <!-- pagination ends -->
 {% endblock %}

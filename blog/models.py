@@ -20,21 +20,15 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     overview = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
-    views = models.IntegerField(default=0)
     thumbnail = models.ImageField(upload_to='post_thumbs')
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    featured = models.BooleanField(default=False)
     content = RichTextField()
-    slug=models.SlugField(null=True, blank=True)
-    previous_post = models.ForeignKey(
-        'self', related_name='previous', on_delete=models.SET_NULL, blank=True, null=True)
-    next_post = models.ForeignKey(
-        'self', related_name='next', on_delete=models.SET_NULL, blank=True, null=True)
+    slug=models.SlugField(null=True, blank=True,editable=False)
     def save(self, *args, **kwargs):
         if self.slug == None:
             slug = slugify(self.title)
             self.slug = slug
-        super().save(*args, **kwargs)
+        super(Post,self).save(*args, **kwargs)
     
     def __str__(self):
         return self.title
